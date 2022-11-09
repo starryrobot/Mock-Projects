@@ -1,0 +1,89 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body,
+html {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.6;
+  background-color: var(--cs-blue);
+}
+
+:root {
+  --main-text: #0c090d;
+  --cs-red: #e01a4f;
+  --cs-blue: #bfd7ea;
+  --default-white: #fff;
+}
+
+.container {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+}
+
+.counter {
+  max-width: 600px;
+  background-color: #fefffe;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+}
+
+#count-text {
+  font-size: 36px;
+  font-weight: 300;
+}
+
+.title {
+  font-size: 56px;
+  font-weight: 200;
+  letter-spacing: 2px;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btns .btn {
+  display: inline-block;
+  padding: 2rem 6rem;
+  font-size: 60px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.btn.increase {
+  background-color: #e0ff4f;
+}
+
+.btn.increase:hover {
+  background-color: rgb(160, 192, 17);
+}
+
+.btn.decrease {
+  background-color: var(--cs-red);
+}
+
+.btn.decrease:hover {
+  background-color: #9d0a31;
+}
+
+.anim-number {
+  animation: anim-num 10s 1 both;
+}
+
+@keyframes anim-num {
+  100% {
+    background-color: #e0ff4f;
+    height: 400px;
+  }
+}
