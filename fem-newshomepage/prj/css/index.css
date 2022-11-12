@@ -24,6 +24,7 @@ body {
   color: var(--text-regular);
   transition: all 500ms ease-out;
   overflow-x: hidden;
+  background-color: #fefdf9;
 }
 
 ul {
@@ -111,6 +112,10 @@ main .top-section {
 
 .news-area li {
   margin-bottom: 1.95rem;
+}
+
+.news-area li:last-child {
+  margin-bottom: 0;
 }
 
 .news-area li::after {
