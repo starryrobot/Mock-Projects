@@ -93,9 +93,9 @@ main .top-section {
   border: none;
   color: var(--def-white);
   text-transform: uppercase;
-  letter-spacing: 1.6px;
+  letter-spacing: 2px;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 500;
   margin-bottom: 3.25rem;
 }
 
