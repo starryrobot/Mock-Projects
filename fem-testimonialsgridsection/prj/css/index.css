@@ -63,7 +63,7 @@ body {
 /* USER TEXT */
 
 .user {
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .credentials {
@@ -158,6 +158,9 @@ body {
 }
 
 @media (min-width: 798px) {
+  .container {
+    margin: 3rem 6rem;
+  }
   .testimonials {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 120px);
