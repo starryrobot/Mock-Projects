@@ -89,6 +89,7 @@ img {
   letter-spacing: 2.5px;
   color: var(--d-green-blue);
   font-weight: 500;
+  font-size: 11px;
 }
 
 .product-desc {
@@ -96,6 +97,7 @@ img {
   /* width: 80%; */
   font-weight: 500;
   line-height: 1.5;
+  font-size: 14px;
 }
 
 .price-area {
@@ -116,6 +118,8 @@ img {
   text-decoration-line: line-through;
   color: var(--d-green-blue);
   display: flex;
+  font-size: 13px;
+  font-weight: 500;
 }
 
 .add-cart {
@@ -156,7 +160,7 @@ img {
   }
 
   .product-head {
-    width: 70%;
+    width: 80%;
     font-weight: 800;
   }
 }
