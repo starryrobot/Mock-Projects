@@ -86,7 +86,7 @@ img {
 
 .product-tag {
   text-transform: uppercase;
-  letter-spacing: 2.5px;
+  letter-spacing: 3px;
   color: var(--d-green-blue);
   font-weight: 500;
   font-size: 11px;
@@ -130,9 +130,10 @@ img {
   border-radius: 10px;
   color: var(--def-white);
   font-family: inherit;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
   transition: all 50ms ease-out;
+  font-size: 12px;
 }
 
 .add-cart i {
