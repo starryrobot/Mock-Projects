@@ -179,3 +179,20 @@ article {
 .unread {
   background-color: var(--v-light-gray-blue);
 }
+
+@media (min-width: 1281px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    background-color: #f9fafe;
+  }
+  .notifications {
+    background-color: white;
+    border: 1px solid var(--v-light-gray-blue);
+    max-width: 900px;
+    margin: 3rem;
+    padding: 2rem 1.5rem;
+    border-radius: 10px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  }
+}
