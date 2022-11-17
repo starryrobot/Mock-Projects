@@ -140,6 +140,10 @@ article {
   float: right;
 } */
 
+.user-text {
+  display: inline-block;
+}
+
 .nt-flex-container {
   display: flex;
   flex-basis: 200px;
@@ -181,6 +185,18 @@ article {
 }
 
 @media (min-width: 798px) {
+  .user {
+    font-size: 18px;
+  }
+
+  .user-text {
+    font-size: 18px;
+  }
+
+  .title-text {
+    font-size: 26px;
+  }
+
   .container {
     display: flex;
     justify-content: center;
@@ -189,7 +205,7 @@ article {
   .notifications {
     background-color: white;
     border: 1px solid var(--v-light-gray-blue);
-    max-width: 900px;
+    max-width: 1440px;
     margin: 3rem;
     padding: 2rem 1.5rem;
     border-radius: 10px;

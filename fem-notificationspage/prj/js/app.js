@@ -1,5 +1,6 @@
 const noteItem = document.querySelectorAll("article");
 const noteNumber = document.getElementById("notifs");
+const notePost = document.getElementById("notif-post");
 const markAll = document.getElementById("mark");
 
 console.log(`Array length is: ${noteItem.length}`);
