@@ -10,6 +10,80 @@
     <title>[FrontEndMentor] Interactive Card</title>
   </head>
   <body>
+    <div class="container">
+      <section class="top">
+        <div class="card-container back">
+          <img
+            class="ccard"
+            src="./images/bg-card-back.png"
+            alt="Card Back"
+            id="card-back"
+          />
+        </div>
+        <div class="card-container front">
+          <img
+            class="ccard"
+            src="./images/bg-card-front.png"
+            alt="Card Front"
+            id="card-front"
+          />
+        </div>
+      </section>
+      <section class="content">
+        <form action="#">
+          <div class="form-div">
+            <label for="cardholder">Cardholder Name</label>
+            <input
+              id="input-ch"
+              type="text"
+              name="cardholder"
+              placeholder="e.g Jane Appleseed"
+              required
+            />
+          </div>
+          <div class="form-div">
+            <label for="cardnumber">Card Number</label>
+            <input
+              id="input-cn"
+              type="number"
+              name="cardnumber"
+              placeholder="e.g 1234 5678 9123 0000"
+              required
+            />
+          </div>
+          <div class="form-div bottom">
+            <div class="expiry">
+              <label for="exp">Expiry Date (MM/YY)</label>
+              <input
+                id="input-xp"
+                type="number"
+                name="exp1"
+                placeholder="MM"
+                required
+              />
+              <input
+                id="input-xp2"
+                type="number"
+                name="exp2"
+                placeholder="YY"
+                required
+              />
+            </div>
+            <div class="cvc">
+              <label for="exp">CVC</label>
+              <input
+                id="input-cvc"
+                type="number"
+                name="code"
+                placeholder="e.g 123"
+                required
+              />
+            </div>
+          </div>
+          <button class="confirm-btn" id="btn">Confirm</button>
+        </form>
+      </section>
+    </div>
     <script src="./js/app.js"></script>
   </body>
 </html>

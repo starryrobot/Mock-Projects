@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --l-gray-violet: hsl(270, 3%, 87%);
+  --d-gray-violet: hsl(279, 6%, 55%);
+  --vd-gray-violet: hsl(278, 68%, 11%);
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.container {
+  min-height: 100vh;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+/* .container {
+  margin: 2rem 1rem;
+} */
+
+.top {
+  position: relative;
+  background-image: url(../images/bg-main-mobile.png);
+  height: 25vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card-container .ccard {
+  position: absolute;
+  width: 67.5%;
+  z-index: 9999;
+}
+
+#card-front {
+  top: 125px;
+  left: 15px;
+}
+
+#card-back {
+  top: 40px;
+  right: 15px;
+}
+
+.content {
+  margin-top: 6rem;
+  padding: 0rem 1.25rem 2rem 1.25rem;
+}
+
+.form-div {
+  margin-bottom: 1rem;
+}
+
+.form-div.bottom {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 10px;
+}
+
+input {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid var(--l-gray-violet);
+  width: 100%;
+  color: #c0bebf;
+}
+
+label {
+  display: block;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--vd-gray-violet);
+}
+
+#input-xp,
+#input-xp2 {
+  width: 60px;
+}
+
+.confirm-btn {
+  width: 100%;
+  padding: 0.75rem 2rem;
+  background-color: var(--vd-gray-violet);
+  border-radius: 5px;
+  border: none;
+  color: var(--white);
+}
