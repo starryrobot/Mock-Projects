@@ -178,3 +178,6 @@ article {
 .new-item {
   background-color: var(--v-light-gray-blue);
 }
+
+.isOld {
+}
