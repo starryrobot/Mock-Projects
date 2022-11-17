@@ -22,6 +22,11 @@ function noteCheck() {
         e.currentTarget.setAttribute("notif-status", "old");
         e.currentTarget.classList.remove("clicked");
         e.currentTarget.setAttribute("disabled", "");
+        if (e.currentTarget.getAttribute("notif-status") === "old") {
+          e.currentTarget.removeAttribute("notif-status");
+          array.pop();
+          noteNumber.textContent = array.length;
+        }
       } else {
         e.currentTarget.classList.remove("new-item");
         e.currentTarget.classList.remove("new");
