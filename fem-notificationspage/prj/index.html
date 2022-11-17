@@ -10,5 +10,104 @@
     <link rel="icon" sizes="32x32" href="./img/favicon-32x32.png" />
     <title>[FrontendMentor] Notification Page</title>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <div class="notifications">
+        <div class="top">
+          <div class="bar">
+            <div class="title">
+              <h1 class="title-text">Notifications</h1>
+              <span class="notif-number" id="notifs">0</span>
+            </div>
+            <div class="mark-read">
+              <span class="mark-all" id="mark">Mark all as read</span>
+            </div>
+          </div>
+        </div>
+        <div class="mid">
+          <article class="notif-item new" id="note">
+            <div class="notif-img">
+              <img src="./img/avatar-mark-webber.webp" alt="User Mark" />
+            </div>
+            <div class="notif-text">
+              <span class="user">Mark Webber</span> reacted to your recent post
+              <span class="notif-post">My first tournament today!</span>
+              <h2 class="time-stamp">1m ago</h2>
+            </div>
+          </article>
+          <article class="notif-item new" id="note">
+            <div class="notif-img">
+              <img src="./img/avatar-angela-gray.webp" alt="User Angela" />
+            </div>
+            <div class="notif-text">
+              <span class="user">Angela Gray</span> followed you
+              <h2 class="time-stamp">5m ago</h2>
+            </div>
+          </article>
+          <article class="notif-item new" id="note">
+            <div class="notif-img">
+              <img src="./img/avatar-jacob-thompson.webp" alt="User Jacob" />
+            </div>
+            <div class="notif-text">
+              <span class="user">Jacob Thompson</span> has joined your group
+              <span class="notif-group">Chess Club</span>
+              <h2 class="time-stamp">1 day ago</h2>
+            </div>
+          </article>
+          <article class="notif-item new" id="note">
+            <div class="notif-img">
+              <img src="./img/avatar-rizky-hasanuddin.webp" alt="User Rizky" />
+            </div>
+            <div class="notif-text">
+              <span class="user">Rizky Hasanuddin</span> sent you a private
+              message
+              <h2 class="time-stamp">5 days ago</h2>
+              <h3 class="notif-msg">
+                Hello, thanks for setting up the Chess Club. I've been a member
+                for a few weeks now and I'm already having lots of fun and
+                improving my game.
+              </h3>
+            </div>
+          </article>
+          <article class="notif-item new" id="note">
+            <div class="notif-img">
+              <img src="./img/avatar-kimberly-smith.webp" alt="User Kimberly" />
+            </div>
+            <div class="notif-text nt-flex">
+              <div class="nt-flex-container">
+                <span class="user">Kimberly Smith</span> commented on your
+                picture
+                <img src="./img/image-chess.webp" alt="Chess" />
+              </div>
+              <h2 class="time-stamp">1 week ago</h2>
+            </div>
+          </article>
+          <article class="notif-item new" id="note">
+            <div class="notif-img">
+              <img src="./img/avatar-nathan-peterson.webp" alt="User Nathan" />
+            </div>
+            <div class="notif-text">
+              <span class="user">Nathan Peterson</span> reacted to your recent
+              post
+              <span class="notif-post"
+                >5 end-game strategies to increase your win rate</span
+              >
+              <h2 class="time-stamp">2 weeks ago</h2>
+            </div>
+          </article>
+          <article class="notif-item new" id="note">
+            <div class="notif-img">
+              <img src="./img/avatar-anna-kim.webp" alt="User Anna" />
+            </div>
+            <div class="notif-text">
+              <span class="user">Anna Kim</span> left the group post
+              <span class="notif-group">Chess Club</span>
+              <h2 class="time-stamp">2 weeks ago</h2>
+            </div>
+          </article>
+          <script src="./js/app.js"></script>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
