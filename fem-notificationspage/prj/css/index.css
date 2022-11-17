@@ -146,7 +146,7 @@ article {
 
 .nt-flex-container {
   display: flex;
-  flex-basis: 200px;
+  /* flex-basis: 200px; */
   /* flex-direction: column; */
 }
 
