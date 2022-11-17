@@ -180,7 +180,7 @@ article {
   background-color: var(--v-light-gray-blue);
 }
 
-@media (min-width: 1281px) {
+@media (min-width: 798px) {
   .container {
     display: flex;
     justify-content: center;
