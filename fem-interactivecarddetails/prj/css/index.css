@@ -16,8 +16,10 @@
 }
 
 body {
+  height: 100vh;
   min-height: 100vh;
   font-family: "Space Grotesk", sans-serif;
+  overflow: hidden;
 }
 
 img {
@@ -25,24 +27,35 @@ img {
   width: 100%;
 }
 
-/* .container {
-  margin: 2rem 1rem;
-} */
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.top {
+  position: relative;
+  z-index: 1;
+}
 
 picture {
-  position: relative;
-  z-index: 8000;
+  width: 100vw;
 }
 
 .card-container .ccard {
   position: absolute;
   width: 72.5%;
-  z-index: 9997;
+  /* z-index: 9997; */
 }
 
 .card-container.front,
 .card-container.back {
   position: relative;
+}
+
+.card-container.front {
+  top: 0;
+  right: -50px;
+  z-index: 2;
 }
 
 #cvc,
@@ -89,12 +102,19 @@ picture {
 
 #card-front {
   top: -100px;
-  left: 15px;
 }
 
 #card-back {
   top: -190px;
   right: 15px;
+}
+
+.ccard-logo {
+  position: absolute;
+  top: -75px;
+  left: 32px;
+  z-index: 9999;
+  width: 50px;
 }
 
 .content {
@@ -169,13 +189,15 @@ label {
 }
 
 @media (min-width: 798px) {
-  .container {
-    display: grid;
-    grid-template-columns: 500px 1fr;
-    /* display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center; */
+  .top {
+    grid-template-columns: 400px 1fr;
+  }
+
+  .content {
+    z-index: 5000;
+    padding-left: 20rem;
+    padding-top: 9rem;
+    /* max-width: 800px; */
   }
 
   #card-front,
@@ -221,30 +243,18 @@ label {
     top: -620px;
     left: 570px;
   }
-
-  /* .top {
-    display: grid;
-    grid-template-columns: 500px 1fr;
-    background-image: none;
-  } */
-
-  .content {
-    z-index: 5000;
-    padding-left: 20rem;
-    padding-top: 9rem;
-    max-width: 800px;
-  }
 }
 
 @media (min-width: 1024px) {
   .container {
-    grid-template-columns: 375px 1fr;
+    grid-template-columns: 0.5fr 1fr;
   }
 
   .content {
-    padding-left: 15rem;
+    padding-left: 25rem;
     padding-top: 9rem;
-    max-width: 600px;
+    max-width: 800px;
+    padding-bottom: 0;
   }
 
   input {
@@ -255,43 +265,67 @@ label {
     font-size: 12px;
   }
 
+  /* Card Component */
+
   #card-front,
   #card-back {
     width: 70%;
   }
 
+  /* Card Component - Front Card */
+
   #card-front {
-    top: -500px;
-    left: 200px;
+    position: relative;
+    top: -990px;
+    left: 290px;
   }
 
+  /* Card Component - Back Card */
+
   #card-back {
-    top: -340px;
-    left: 260px;
+    top: -690px;
+    left: 390px;
     z-index: 9999;
   }
 
+  /* Card Component - Card Holder */
+
   #cardname {
-    top: -620px;
-    left: 280px;
+    top: -780px;
+    left: 320px;
   }
+
+  /* Card Component - Card Number */
 
   #cardno {
-    top: -680px;
-    left: 280px;
+    top: -835px;
+    left: 320px;
     width: 100%;
-    font-size: 28px;
+    font-size: 30px;
+    letter-spacing: 2.5px;
   }
 
+  /* Card Component - Security Code */
+
   #cvc {
-    top: -470px;
-    left: 630px;
+    top: -585px;
+    left: 725px;
     font-size: 14px;
   }
 
+  /* Card Component - Expiry Date */
+
   #expdate {
-    top: -620px;
-    left: 570px;
+    top: -780px;
+    left: 660px;
+  }
+
+  /* Card Component - Logo */
+
+  .ccard-logo {
+    top: -950px;
+    left: 320px;
+    width: 75px;
   }
 
   .confirm-btn {
