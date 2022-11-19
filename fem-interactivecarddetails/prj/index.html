@@ -12,6 +12,13 @@
   <body>
     <div class="container">
       <section class="top">
+        <picture>
+          <source
+            media="(min-width: 798px)"
+            srcset="./images/bg-main-desktop.png"
+          />
+          <img src="./images/bg-main-mobile.png" alt="Mobile" />
+        </picture>
         <div class="card-container back">
           <img
             class="ccard"
@@ -19,6 +26,7 @@
             alt="Card Back"
             id="card-back"
           />
+          <span id="cvc">000</span>
         </div>
         <div class="card-container front">
           <img
@@ -27,6 +35,9 @@
             alt="Card Front"
             id="card-front"
           />
+          <span id="cardno">0000 0000 0000 0000</span>
+          <span id="cardname">Jane Appleseed</span>
+          <span id="expdate">00/00</span>
         </div>
       </section>
       <section class="content">
@@ -78,6 +89,15 @@
                 placeholder="e.g 123"
                 required
               />
+            </div>
+          </div>
+          <div class="hidden-confirmation">
+            <div class="tick">
+              <img src="./images/icon-complete.svg" alt="Done" />
+            </div>
+            <div class="text">
+              <h1 class="header">Thank you!</h1>
+              <h2 class="description">We've add your details</h2>
             </div>
           </div>
           <button class="confirm-btn" id="btn">Confirm</button>

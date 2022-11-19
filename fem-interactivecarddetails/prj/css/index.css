@@ -29,27 +29,71 @@ img {
   margin: 2rem 1rem;
 } */
 
-.top {
+picture {
   position: relative;
-  background-image: url(../images/bg-main-mobile.png);
-  height: 25vh;
-  background-repeat: no-repeat;
-  background-size: cover;
+  z-index: 8000;
 }
 
 .card-container .ccard {
   position: absolute;
-  width: 67.5%;
+  width: 72.5%;
+  z-index: 9997;
+}
+
+.card-container.front,
+.card-container.back {
+  position: relative;
+}
+
+#cvc,
+#cardno,
+#cardname,
+#expdate {
+  display: block;
+  position: absolute;
+  color: var(--white);
+  letter-spacing: 1.4px;
+}
+
+#cardname,
+#expdate,
+#cvc {
+  font-size: 10px;
+}
+
+#cvc {
+  top: -119px;
+  right: 50px;
+  z-index: 999999;
+}
+
+#cardno {
+  top: -20px;
+  left: 32px;
+  z-index: 9999;
+  font-size: 20px;
+}
+
+#cardname {
+  top: 25px;
+  z-index: 10000;
+  left: 32px;
+  text-transform: uppercase;
+}
+
+#expdate {
+  top: 25px;
+  left: 245px;
   z-index: 9999;
 }
 
 #card-front {
-  top: 125px;
+  top: -100px;
   left: 15px;
 }
 
 #card-back {
-  top: 40px;
+  top: -190px;
   right: 15px;
 }
 
@@ -65,6 +109,7 @@ img {
 .form-div.bottom {
   display: grid;
   grid-template-columns: 125px 1fr;
+  align-items: end;
   gap: 10px;
 }
 
@@ -74,6 +119,19 @@ input {
   border: 1px solid var(--l-gray-violet);
   width: 100%;
   color: #c0bebf;
+}
+
+/* Remove arrows on inputs with number type */
+
+/* Chrome, Edge, IE, Safari etc */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 
 label {
@@ -91,6 +149,12 @@ label {
   width: 60px;
 }
 
+#input-xp::-webkit-outer-spin-button,
+#input-xp2::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+}
+
 .confirm-btn {
   width: 100%;
   padding: 1.25rem 2.5rem;
@@ -98,4 +162,139 @@ label {
   border-radius: 5px;
   border: none;
   color: var(--white);
+}
+
+.hidden-confirmation {
+  display: none;
+}
+
+@media (min-width: 798px) {
+  .container {
+    display: grid;
+    grid-template-columns: 500px 1fr;
+    /* display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; */
+  }
+
+  #card-front,
+  #card-back {
+    width: 80%;
+  }
+
+  #card-front {
+    top: -800px;
+    left: 250px;
+  }
+
+  #card-back {
+    top: -570px;
+    left: 320px;
+    z-index: 9999;
+  }
+
+  #cardname,
+  #expdate {
+    font-size: 14px;
+  }
+
+  #cardname {
+    top: -620px;
+    left: 280px;
+  }
+
+  #cardno {
+    top: -680px;
+    left: 280px;
+    width: 100%;
+    font-size: 28px;
+  }
+
+  #cvc {
+    top: -470px;
+    left: 630px;
+    font-size: 14px;
+  }
+
+  #expdate {
+    top: -620px;
+    left: 570px;
+  }
+
+  /* .top {
+    display: grid;
+    grid-template-columns: 500px 1fr;
+    background-image: none;
+  } */
+
+  .content {
+    z-index: 5000;
+    padding-left: 20rem;
+    padding-top: 9rem;
+    max-width: 800px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    grid-template-columns: 375px 1fr;
+  }
+
+  .content {
+    padding-left: 15rem;
+    padding-top: 9rem;
+    max-width: 600px;
+  }
+
+  input {
+    padding: 0.5rem;
+  }
+
+  label {
+    font-size: 12px;
+  }
+
+  #card-front,
+  #card-back {
+    width: 70%;
+  }
+
+  #card-front {
+    top: -500px;
+    left: 200px;
+  }
+
+  #card-back {
+    top: -340px;
+    left: 260px;
+    z-index: 9999;
+  }
+
+  #cardname {
+    top: -620px;
+    left: 280px;
+  }
+
+  #cardno {
+    top: -680px;
+    left: 280px;
+    width: 100%;
+    font-size: 28px;
+  }
+
+  #cvc {
+    top: -470px;
+    left: 630px;
+    font-size: 14px;
+  }
+
+  #expdate {
+    top: -620px;
+    left: 570px;
+  }
+
+  .confirm-btn {
+    padding: 0.7rem 1.5rem;
+  }
 }
