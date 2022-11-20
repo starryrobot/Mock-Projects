@@ -61,11 +61,13 @@ picture {
 #cvc,
 #cardno,
 #cardname,
-#expdate {
+#expdate,
+.ccard-logo {
   display: block;
   position: absolute;
   color: var(--white);
   letter-spacing: 1.4px;
+  opacity: 0;
 }
 
 #cardname,
@@ -115,6 +117,10 @@ picture {
   left: 32px;
   z-index: 9999;
   width: 50px;
+}
+
+#verified {
+  width: 100px;
 }
 
 .content {
@@ -185,7 +191,38 @@ label {
 }
 
 .hidden-confirmation {
-  display: none;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 400px;
+  left: 80px;
+  opacity: 0;
+}
+
+.header {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #190123;
+  letter-spacing: 1.5px;
+  font-size: 28px;
+}
+
+.description {
+  color: var(--d-gray-violet);
+  font-weight: 500;
+  font-size: 18px;
+}
+
+form {
+  transition: all 300ms ease-out;
+}
+
+.hidden-confirmation {
+  transition: all 1s ease-out;
+  transition-delay: 500ms;
 }
 
 @media (min-width: 798px) {

@@ -57,9 +57,10 @@
             <label for="cardnumber">Card Number</label>
             <input
               id="input-cn"
-              type="number"
+              type="text"
               name="cardnumber"
               placeholder="e.g 1234 5678 9123 0000"
+              maxlength="19"
               required
             />
           </div>
@@ -71,6 +72,8 @@
                 type="number"
                 name="exp1"
                 placeholder="MM"
+                onkeypress="return this.value.length < 2;"
+                pattern="/^[0-9]{2}$/"
                 required
               />
               <input
@@ -78,6 +81,8 @@
                 type="number"
                 name="exp2"
                 placeholder="YY"
+                onkeypress="return this.value.length < 2;"
+                pattern="/^[0-9]{2}$/"
                 required
               />
             </div>
@@ -88,21 +93,23 @@
                 type="number"
                 name="code"
                 placeholder="e.g 123"
+                onkeypress="return this.value.length < 3;"
+                pattern="/^[0-9]{3}$/"
                 required
               />
             </div>
           </div>
-          <div class="hidden-confirmation">
-            <div class="tick">
-              <img src="./images/icon-complete.svg" alt="Done" />
-            </div>
-            <div class="text">
-              <h1 class="header">Thank you!</h1>
-              <h2 class="description">We've add your details</h2>
-            </div>
-          </div>
           <button class="confirm-btn" id="btn">Confirm</button>
         </form>
+        <div class="hidden-confirmation" id="confirm-hidden">
+          <div class="tick">
+            <img id="verified" src="./images/icon-complete.svg" alt="Done" />
+          </div>
+          <div class="text">
+            <h1 class="header">Thank you!</h1>
+            <h2 class="description">We've added your card details</h2>
+          </div>
+        </div>
       </section>
     </div>
     <script src="./js/app.js"></script>
