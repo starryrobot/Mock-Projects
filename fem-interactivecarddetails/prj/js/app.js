@@ -57,12 +57,14 @@ form.addEventListener("keyup", function (e) {
     cardCVC.textContent = ccCVC;
   }
 
-  if ((ccExpiry && ccExpiry2 === null) || (!ccExpiry && ccExpiry2 < 2)) {
+  if ((ccExpiry && ccExpiry2 === null) || (ccExpiry && ccExpiry2 < 2)) {
     inputExp.style.border = "2px solid red";
     inputExp2.style.border = "2px solid red";
   } else {
     inputExp.style.border = "2px solid green";
     inputExp2.style.border = "2px solid green";
+    cardExp.style.opacity = 1;
+    cardExp.textContent = ccExpiry + "/" + ccExpiry2;
   }
 });
 
