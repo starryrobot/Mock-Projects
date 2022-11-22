@@ -50,6 +50,7 @@ form.addEventListener("keyup", function (e) {
   } else {
     // cardFront.classList.add("flip-scale-2-ver-right");
     inputName.style.border = "2px solid green";
+    cardName.classList.toggle("text-shadow-drop-bottom");
     cardName.textContent = ccName;
     cardName.style.opacity = 1;
     ccNameChecked = true;
@@ -61,6 +62,7 @@ form.addEventListener("keyup", function (e) {
     inputNumb.style.border = "2px solid green";
     cardCC.style.opacity = 1;
     cardCC.textContent = ccNum;
+    cardCC.classList.toggle("text-shadow-drop-bottom");
     ccNumChecked = true;
   }
 
@@ -85,6 +87,7 @@ form.addEventListener("keyup", function (e) {
     // cardBack.classList.add("flip-scale-2-ver-right");
     ccExpiryChecked = true;
     ccExpiry2Checked = true;
+    cardExp.classList.toggle("text-shadow-drop-bottom");
   }
 });
 
@@ -118,6 +121,7 @@ function checkDetails(e) {
     hidden.style.opacity = 1;
     form.style.display = "none";
     ccLogo.style.opacity = 1;
+    hidden.classList.toggle("puff-in-center");
   } else {
     console.log("Fails");
   }
