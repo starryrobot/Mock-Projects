@@ -567,15 +567,15 @@ form {
   /* Card Component - Front Card */
 
   #card-front {
-    position: relative;
-    top: -990px;
+    /* position: relative; */
+    top: -800px;
     left: 290px;
   }
 
   /* Card Component - Back Card */
 
   #card-back {
-    top: -690px;
+    top: -580px;
     left: 390px;
     z-index: 9999;
   }
@@ -583,33 +583,33 @@ form {
   /* Card Component - Card Holder */
 
   #cardname {
-    top: -780px;
+    top: -650px;
     left: 320px;
   }
 
   /* Card Component - Card Number */
 
   #cardno {
-    top: -835px;
+    top: -700px;
     left: 320px;
     width: 100%;
-    font-size: 30px;
+    font-size: 22px;
     letter-spacing: 2.5px;
   }
 
   /* Card Component - Security Code */
 
   #cvc {
-    top: -585px;
-    left: 725px;
+    top: -495px;
+    left: 650px;
     font-size: 14px;
   }
 
   /* Card Component - Expiry Date */
 
   #expdate {
-    top: -780px;
-    left: 660px;
+    top: -650px;
+    left: 570px;
   }
 
   /* Card Component - Logo */
