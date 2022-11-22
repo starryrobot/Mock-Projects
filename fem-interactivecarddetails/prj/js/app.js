@@ -124,4 +124,12 @@ function checkDetails(e) {
   e.preventDefault();
 }
 
-function resetForm() {}
+// 1234-1234-1234-1234
+
+// function resetForm() {
+//   body.style.opacity = 0;
+//   setTimeout(refreshPage, 3000)
+//   refreshPage() {
+//     body.style.opacity = 1;
+//   }
+// }
