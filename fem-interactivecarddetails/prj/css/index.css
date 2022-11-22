@@ -16,10 +16,9 @@
 }
 
 body {
-  height: 100vh;
-  min-height: 100vh;
+  /* height: 100vh;
+  min-height: 100vh; */
   font-family: "Space Grotesk", sans-serif;
-  overflow: hidden;
 }
 
 img {
@@ -39,6 +38,7 @@ a {
 .container {
   display: grid;
   grid-template-columns: 1fr;
+  overflow: hidden;
 }
 
 .top {
