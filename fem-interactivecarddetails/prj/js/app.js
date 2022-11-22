@@ -17,6 +17,9 @@ const inputNumb = document.getElementById("input-cn");
 const inputCVC = document.getElementById("input-cvc");
 const inputExp = document.getElementById("input-xp");
 const inputExp2 = document.getElementById("input-xp2");
+const submitBtns = document.querySelectorAll(".confirm-btn");
+const cardFront = document.getElementById("card-front");
+const cardBack = document.getElementById("card-rear");
 let ccNumRegex = new RegExp(/^[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}$/);
 let ccNameRegex = new RegExp(/^[a-zA-Z]*\s[a-zA-Z]*\s[a-zA-Z]*$/);
 let ccName = "";
@@ -25,6 +28,15 @@ let ccCVC = "";
 let ccExpiry = "";
 let ccExpiry2 = "";
 let cardChecked = false;
+let ccNameChecked = false;
+let ccNumChecked = false;
+let ccExpiryChecked = false;
+let ccExpiry2Checked = false;
+let ccCVCChecked = false;
+
+window.addEventListener("DOMContentLoaded", function () {
+  hidden.style.display = "none";
+});
 
 form.addEventListener("keyup", function (e) {
   ccName = document.getElementById("input-ch").value;
@@ -36,9 +48,11 @@ form.addEventListener("keyup", function (e) {
   if (ccName === null || cardName.length < 3 || !ccNameRegex.test(ccName)) {
     inputName.style.border = "2px solid red";
   } else {
+    // cardFront.classList.add("flip-scale-2-ver-right");
     inputName.style.border = "2px solid green";
-    cardName.style.opacity = 1;
     cardName.textContent = ccName;
+    cardName.style.opacity = 1;
+    ccNameChecked = true;
   }
 
   if (ccNum === null || !ccNumRegex.test(ccNum)) {
@@ -47,6 +61,7 @@ form.addEventListener("keyup", function (e) {
     inputNumb.style.border = "2px solid green";
     cardCC.style.opacity = 1;
     cardCC.textContent = ccNum;
+    ccNumChecked = true;
   }
 
   if (ccCVC === null || ccCVC < 3) {
@@ -55,6 +70,8 @@ form.addEventListener("keyup", function (e) {
     inputCVC.style.border = "2px solid green";
     cardCVC.style.opacity = 1;
     cardCVC.textContent = ccCVC;
+    // cardBack.classList.add("flip-scale-2-ver-right");
+    ccCVCChecked = true;
   }
 
   if ((ccExpiry && ccExpiry2 === null) || (ccExpiry && ccExpiry2 < 2)) {
@@ -65,23 +82,46 @@ form.addEventListener("keyup", function (e) {
     inputExp2.style.border = "2px solid green";
     cardExp.style.opacity = 1;
     cardExp.textContent = ccExpiry + "/" + ccExpiry2;
+    // cardBack.classList.add("flip-scale-2-ver-right");
+    ccExpiryChecked = true;
+    ccExpiry2Checked = true;
   }
 });
 
 formSubmit.addEventListener("click", checkDetails);
 
 function checkDetails(e) {
+  checkAmount = 0;
   console.log(`Card details are:`);
   console.log(`Card holder: ${ccName}`);
   console.log(`Card number: ${ccNum}`);
   console.log(`Card CVC: ${ccCVC}`);
   console.log(`Card Expiry Month: ${ccExpiry}`);
   console.log(`Card Expiry Year: ${ccExpiry2}`);
-  if (ccNumRegex.test(ccNum) == true) {
+  // if (ccNumRegex.test(ccNum) == true) {
+  //   form.style.opacity = 0;
+  //   hidden.style.opacity = 1;
+  //   form.style.display = "none";
+  //   ccLogo.style.opacity = 1;
+  // } else {
+  //   console.log("Fails");
+  // }
+  if (
+    ccNameChecked &&
+    ccNumChecked &&
+    ccExpiryChecked &&
+    ccExpiry2Checked &&
+    ccCVCChecked
+  ) {
+    hidden.style.display = "flex";
     form.style.opacity = 0;
     hidden.style.opacity = 1;
+    form.style.display = "none";
+    ccLogo.style.opacity = 1;
   } else {
     console.log("Fails");
   }
   e.preventDefault();
 }
+
+function resetForm() {}
