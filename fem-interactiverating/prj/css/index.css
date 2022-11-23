@@ -1,0 +1,231 @@
+/* Imports */
+
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* Globals */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --primary-orange: hsl(25, 97%, 53%);
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(217, 12%, 63%);
+  --medium-grey: hsl(216, 12%, 54%);
+  --dark-blue: hsl(213, 19%, 18%);
+  --v-dark-blue: hsl(216, 12%, 8%);
+  --f-w-400: 400;
+  --f-w-700: 700;
+  --f-s-15: 15px;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+body {
+  font-family: "Overpass", sans-serif;
+  min-height: 100vh;
+  height: 100vh;
+  background-color: var(--v-dark-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Container */
+
+.container {
+  padding: 4rem 2rem;
+}
+
+/* Wrapper */
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--dark-blue);
+  border-radius: 20px;
+  padding: 2rem 1.25rem;
+  color: var(--white);
+}
+
+/* Top */
+
+.top {
+  align-self: flex-start;
+}
+
+/* Fav Star */
+
+.fav-star {
+  background-color: hsla(217, 12%, 63%, 0.12);
+  padding: 0.6rem;
+  border-radius: 50%;
+  width: 35px;
+}
+
+/* Rating */
+
+.rating {
+  text-align: center;
+  list-style: none;
+  margin-top: 1.5rem;
+}
+
+.rating .option {
+  display: inline-block;
+  cursor: pointer;
+  padding: 0.75rem;
+  background-color: hsla(217, 12%, 63%, 0.15);
+  color: var(--light-grey);
+  border-radius: 50%;
+  margin-right: 0.75rem;
+  transition: all 100ms ease-out;
+}
+
+.rating .option:first-child {
+  margin-left: 0;
+}
+
+/* Rating Pseudo Classes */
+
+.rating .option:last-child {
+  margin-right: 0;
+}
+
+.rating .option:hover {
+  background-color: var(--light-grey);
+  color: var(--white);
+}
+
+.rating .option:active {
+  background-color: var(--primary-orange);
+  color: var(--white);
+}
+
+/* Rating Option Divs */
+
+.option-1,
+.option-2,
+.option-3,
+.option-4,
+.option-5 {
+  text-align: center;
+  width: 40px;
+  height: 40px;
+}
+
+/* .option-1.selected {
+  background-color: var(--primary-orange);
+  color: var(--white);
+} */
+
+.option.selected {
+  background-color: var(--primary-orange);
+  color: var(--white);
+}
+
+/* Header */
+
+.header {
+  font-size: 24px;
+  font-weight: var(--f-w-400);
+}
+
+/* Paragraph */
+
+.para {
+  color: var(--light-grey);
+  line-height: 1.4;
+  font-size: 14px;
+}
+
+/* Button Component */
+
+.btn {
+  background-color: var(--primary-orange);
+  color: var(--white);
+  padding: 0.75rem 1rem;
+  border-radius: 25px;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 1.6px;
+  text-align: center;
+  font-size: 14px;
+  transition: all 250ms ease-out;
+  cursor: pointer;
+  width: 100%;
+}
+
+.btn:hover {
+  background-color: var(--white);
+  color: var(--primary-orange);
+}
+
+.btn.btn-submit {
+  margin-top: 1.5rem;
+}
+
+/* Confirmation Window */
+
+.confirmation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.confirmation .confirm-img {
+  width: 150px;
+}
+
+.confirmation .header {
+  margin-top: 1.25rem;
+}
+
+.confirmation .para {
+  text-align: center;
+}
+
+.selection {
+  display: inline-block;
+  color: var(--primary-orange);
+  background-color: hsla(217, 12%, 63%, 0.15);
+  padding: 0.25rem 1rem;
+  border-radius: 15px;
+  margin-top: 1.25rem;
+}
+
+/* MEDIA QUERIES */
+/* Mobile - Landscape Mode */
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .wrapper {
+    max-width: 350px;
+  }
+}
+
+/* Laptops */
+
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+  .wrapper {
+    max-width: 350px;
+  }
+}
+
+/* Desktops */
+
+@media only screen and (min-width: 1281px) {
+  .wrapper {
+    max-width: 350px;
+  }
+}
