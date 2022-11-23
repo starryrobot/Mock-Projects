@@ -93,6 +93,7 @@ function animateDivs() {
   function display() {
     topDiv.style.display = "none";
     midDiv.style.display = "none";
+    confirmDiv.classList.add("puff-in-center");
     confirmDiv.style.display = "flex";
   }
 }
