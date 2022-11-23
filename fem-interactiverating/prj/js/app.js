@@ -83,4 +83,16 @@ function lastRating() {
     optionArray[4].classList.toggle("selected");
     console.log(optionArray[lastOption]);
   }
+  setTimeout(animateDivs, 200);
+}
+
+function animateDivs() {
+  topDiv.classList.add("puff-out-center");
+  midDiv.classList.add("puff-out-center");
+  setTimeout(display, 300);
+  function display() {
+    topDiv.style.display = "none";
+    midDiv.style.display = "none";
+    confirmDiv.style.display = "flex";
+  }
 }
