@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="FrontEndMentor - Expenses Chart" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/charts.css/dist/charts.min.css"
+    />
+    <title>[FrontEndMentor] Expenses Chart</title>
+  </head>
+  <body>
+    <div class="container pad-c">
+      <div class="wrapper">
+        <div class="top-bar pad-1 br-10">
+          <div class="balance">
+            <span class="small-header">My balance</span>
+            <h1 class="main-header">$921.48</h1>
+          </div>
+          <div class="logo">
+            <img class="brand-logo" src="./img/logo.svg" alt="Logo" />
+          </div>
+        </div>
+        <div class="graph pad-1 br-10">
+          <h1 class="main-header alt-header">Spending - Last 7 days</h1>
+          <div class="graph-area">
+            <table
+              id="column-example-6"
+              class="charts-css column show-labels data-spacing-5 show-data-on-hover"
+            >
+              <caption>
+                Column Example #6
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Year</th>
+                  <th scope="col">Progress</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">mon</th>
+                  <td
+                    style="
+                      --size: calc(17.45 / 104.72);
+                      --color: hsl(10, 79%, 65%);
+                    "
+                  ></td>
+                </tr>
+                <tr>
+                  <th scope="row">tue</th>
+                  <td
+                    style="
+                      --size: calc(34.91 / 104.72);
+                      --color: hsl(10, 79%, 65%);
+                    "
+                  ></td>
+                </tr>
+                <tr>
+                  <th scope="row">wed</th>
+                  <td
+                    style="
+                      --size: calc(52.36 / 104.72);
+                      --color: hsl(186, 34%, 60%);
+                    "
+                  ></td>
+                </tr>
+                <tr>
+                  <th scope="row">thu</th>
+                  <td
+                    style="
+                      --size: calc(31.07 / 104.72);
+                      --color: hsl(10, 79%, 65%);
+                    "
+                  ></td>
+                </tr>
+                <tr>
+                  <th scope="row">fri</th>
+                  <td
+                    style="
+                      --size: calc(23.39 / 104.72);
+                      --color: hsl(10, 79%, 65%);
+                    "
+                  ></td>
+                </tr>
+                <tr>
+                  <th scope="row">sat</th>
+                  <td
+                    style="
+                      --size: calc(43.28 / 104.72);
+                      --color: hsl(10, 79%, 65%);
+                    "
+                  ></td>
+                </tr>
+                <tr>
+                  <th scope="row">sun</th>
+                  <td
+                    style="
+                      --size: calc(25.48 / 104.72);
+                      --color: hsl(10, 79%, 65%);
+                    "
+                  ></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <hr class="rule" />
+          <div class="totals">
+            <div class="month">
+              <span class="small-header s-alt-header">Total this month</span>
+              <h3 class="total-text">$478.33</h3>
+            </div>
+            <div class="percent">
+              <h4 class="percent-change">+2.4%</h4>
+              <span class="small-header s-alt-header">from last month</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <span class="credits"
+        >Created with 💖 by
+        <a href="https://github.com/starryrobot/Mock-Projects" target="_blank"
+          >starryrobot</a
+        >
+        for
+        <a href="https://www.frontendmentor.io" target="_blank"
+          >FrontEndMentor</a
+        ></span
+      >
+    </div>
+    <script src="./js/app.js"></script>
+  </body>
+</html>
