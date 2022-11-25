@@ -48,6 +48,8 @@ optionDivs.forEach(function (btn) {
       e.currentTarget.classList.toggle("selected");
       selectionTxt.textContent =
         "You selected " + "5 out of" + " " + optionArray.length;
+    } else {
+      lastOption = 0;
     }
   });
 });
@@ -68,10 +70,6 @@ function getRating() {
 function lastRating() {
   console.log(`Last choice was ${lastOption}`);
   //   optionArray[0].classList.toggle("selected");
-  if (lastOption < 1) {
-    console.log("You what son?");
-    zeroInput = true;
-  }
   if (lastOption == 1) {
     optionArray[0].classList.toggle("selected");
     console.log(optionArray[lastOption]);
@@ -87,12 +85,14 @@ function lastRating() {
   } else if (lastOption == 5) {
     optionArray[4].classList.toggle("selected");
     console.log(optionArray[lastOption]);
+  } else {
+    zeroInput = true;
   }
   setTimeout(animateDivs, 200);
 }
 
 function animateDivs() {
-  if ((zeroInput = true)) {
+  if (zeroInput === true) {
     let noInputContent = `
                           <h1 class="header">Oops!</h1>
                           <p class="para">You didn't make a choice!</p>
@@ -103,14 +103,15 @@ function animateDivs() {
     confirmDiv.classList.add("puff-in-center");
     confirmDiv.innerHTML = noInputContent;
     confirmDiv.style.display = "flex";
-  }
-  topDiv.classList.add("puff-out-center");
-  midDiv.classList.add("puff-out-center");
-  setTimeout(display, 300);
-  function display() {
-    topDiv.style.display = "none";
-    midDiv.style.display = "none";
-    confirmDiv.classList.add("puff-in-center");
-    confirmDiv.style.display = "flex";
+  } else {
+    topDiv.classList.add("puff-out-center");
+    midDiv.classList.add("puff-out-center");
+    setTimeout(display, 300);
+    function display() {
+      topDiv.style.display = "none";
+      midDiv.style.display = "none";
+      confirmDiv.classList.add("puff-in-center");
+      confirmDiv.style.display = "flex";
+    }
   }
 }
