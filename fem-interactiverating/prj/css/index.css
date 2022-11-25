@@ -231,6 +231,7 @@ body {
 /* Wrapper */
 
 .wrapper {
+  background: linear-gradient(hsl(213, 19%, 15%), hsl(213, 19%, 10%));
   display: flex;
   flex-direction: column;
   align-items: center;
