@@ -57,18 +57,14 @@ td {
   border-radius: 5px;
 }
 
-td:hover {
-  background-color: black;
+tr:active td {
+  opacity: 0.8;
 }
 
 th {
   font-size: 12px;
   color: var(--med-brown);
   font-weight: 400;
-}
-
-.graph-area {
-  position: relative;
 }
 
 .active-price {
