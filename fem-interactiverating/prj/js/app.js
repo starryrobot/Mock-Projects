@@ -11,6 +11,7 @@ const submitBtn = document.getElementById("submit");
 const selectionTxt = document.getElementById("select");
 let optionArray = [];
 let lastOption = 0;
+let zeroInput = false;
 
 optionDivs.forEach(function (btn) {
   optionArray = optionDivs;
@@ -67,6 +68,10 @@ function getRating() {
 function lastRating() {
   console.log(`Last choice was ${lastOption}`);
   //   optionArray[0].classList.toggle("selected");
+  if (lastOption < 1) {
+    console.log("You what son?");
+    zeroInput = true;
+  }
   if (lastOption == 1) {
     optionArray[0].classList.toggle("selected");
     console.log(optionArray[lastOption]);
@@ -87,6 +92,18 @@ function lastRating() {
 }
 
 function animateDivs() {
+  if ((zeroInput = true)) {
+    let noInputContent = `
+                          <h1 class="header">Oops!</h1>
+                          <p class="para">You didn't make a choice!</p>
+                          <button class="btn btn-submit" onclick="window.location.reload()">Try again</button>
+                          `;
+    topDiv.style.display = "none";
+    midDiv.style.display = "none";
+    confirmDiv.classList.add("puff-in-center");
+    confirmDiv.innerHTML = noInputContent;
+    confirmDiv.style.display = "flex";
+  }
   topDiv.classList.add("puff-out-center");
   midDiv.classList.add("puff-out-center");
   setTimeout(display, 300);
