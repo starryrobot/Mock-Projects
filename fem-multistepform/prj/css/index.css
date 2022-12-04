@@ -41,7 +41,7 @@ img {
   position: absolute;
   transform: translate(-50%, -50%);
   z-index: 1000;
-  top: 20%;
+  top: 25%;
   left: 50%;
 }
 
