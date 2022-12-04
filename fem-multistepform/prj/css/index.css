@@ -23,6 +23,8 @@
 
 body {
   font-family: "Ubuntu", sans-serif;
+  text-rendering: geometricPrecision;
+  background-color: var(--magnolia);
 }
 
 img {
@@ -39,7 +41,7 @@ img {
   position: absolute;
   transform: translate(-50%, -50%);
   z-index: 1000;
-  top: 10%;
+  top: 20%;
   left: 50%;
 }
 
@@ -72,4 +74,44 @@ img {
 
 .steps .step-content {
   display: none;
+}
+
+.form {
+  position: absolute;
+  top: 80px;
+  padding: 1rem 1.5rem;
+  margin: 1rem;
+  background-color: var(--white);
+  border-radius: 10px;
+}
+
+.main-head {
+  color: var(--marine-blue);
+  font-size: 26px;
+}
+
+.main-para {
+  color: var(--cool-gray);
+  font-size: 16px;
+  font-weight: 400;
+  width: 75%;
+  margin-bottom: 2rem;
+}
+
+footer {
+  display: flex;
+  justify-content: right;
+  position: fixed;
+  bottom: 0;
+  padding: 1rem;
+  background-color: var(--white);
+  width: 100%;
+}
+
+.btn {
+  background-color: var(--marine-blue);
+  padding: 0.75rem;
+  border-radius: 5px;
+  border: none;
+  color: var(--white);
 }
